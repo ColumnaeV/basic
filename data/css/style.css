@@ -1,0 +1,381 @@
+/*Fonts & Texts*/
+@font-face {
+    font-family: 'SF-Pro-Display';
+    src: url(../font/SF-Pro-Display-Thin.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orkney-Bold';
+    src: url(../font/Orkney-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bulgatti';
+    src: url(../font/Bulgatti.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 1em;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #bfa368;
+    font-weight: 300;
+    font-family: "Orkney-Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fafafa;
+    font-weight: 300;
+    font-family: "SF-Pro-Display", Helvetica, Arial, sans-serif;
+    background-color: #000;
+    padding: 0.75em;
+}
+
+h3 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 300;
+    font-family: "Orkney-Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+h4 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 300;
+    font-family: "Bulgatti", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    padding: 1vw 5vw 4vw 5vw;
+}
+
+h5 {
+    margin: 0;
+    font-size: 2em;
+    color: #bfa368;
+    font-weight: 300;
+    font-family: "Orkney-Bold", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0vw 5vw 2vw 5vw;
+}
+
+p {
+    margin: 0;
+    font-size: 1em;
+    color: #fafafa;
+    font-weight: 100;
+    font-family: "SF-Pro-Display", Helvetica, Arial, sans-serif;
+    line-height: 200%;
+    letter-spacing: 0.05em;
+    word-spacing: 0.125em;
+    text-indent: 2em;
+    padding: 2vw 5vw;
+}
+
+span {
+    color: #bfa368;
+}
+
+/*Loading Styles*/
+#load {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 1;
+    background-color: #fafafa;
+    transition-duration: 0.5s;
+}
+
+#loading-container {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#loading-image{
+    max-height: 20em;
+    max-width: 20em;
+}
+
+.loading-bar {
+    margin-top: 3em;
+    background-color: #ccc;
+    width: 15vw;
+    height: 4px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.move-bar {
+    animation: sideToside 1.5s ease-in-out infinite;
+    background-color: #bfa368;
+    height: 100%;
+    position: absolute;
+    width: 50%;
+}
+
+@keyframes sideToside {
+    0%, 100% { transform: translateX(-50%); }
+    50%      { transform: translateX(150%); }
+}
+
+/*Standardised Styles*/
+img {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/*Containers*/
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: #000;
+    overflow-x: hidden;
+    
+}
+
+#body-container{
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    transition-duration: 1.5s;
+    display: block;
+    opacity: 0;
+    transition-duration: 1.25s;
+    overflow: hidden;
+}
+
+/*Page Styles*/
+.page {
+    width: 100%;
+    height: auto;
+}
+
+.content-page {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+}
+
+.ds-split {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+}
+
+.split-content{
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/*Image Styles*/
+.page-img {
+    max-height: 24vw;
+    max-width: 24vw;
+}
+
+/*Soc Med*/
+.soc-med-container {
+    margin: 0 5vw;
+    padding: 0.25vw 2vw;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #bfa368;
+    align-content: center;
+    text-align: center;
+}
+
+.soc-med-img {
+    height: 1.75em;
+    width: 1.75em;
+    padding: 1vw;
+}
+
+a {
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*Particles*/
+#particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+/*Scroll Bar Styles*/
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bfa368;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/*Selection Style*/
+::selection {
+    color: #f1f1f1;
+    background: #bfa368;
+}
+
+::-moz-selection {
+    color: #f1f1f1;
+    background: #bfa368;
+}
+
+/*Mobile Support*/
+@media only screen and (max-width: 100vh) {
+ /*Fonts & Texts*/
+html {
+    font-size: 0.7em;
+}
+
+h4 {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    font-family: "Bulgatti", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    padding: 2vw 1vw 8vw 1vw;
+}
+
+/*Loading Styles*/
+#loading-image{
+    max-height: 20em;
+    max-width: 20em;
+}
+
+.loading-bar {
+    margin-top: 3em;
+    background-color: #ccc;
+    width: 45vw;
+    height: 4px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*Page Styles*/
+.content-page {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    margin: 0 0;
+}
+
+.ds-split {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: inherit;
+    align-items: center;
+}
+
+.split-content{
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/*Image Styles*/
+.page-img {
+    max-height: 70vw;
+    max-width: 70vw;
+}
+
+/*Soc Med*/
+.soc-med-container {
+    margin: 0 5vw;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #bfa368;
+}
+
+.soc-med-img {
+    height: 2em;
+    width: 2em;
+    padding: 2vw;
+}
+
+a {
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*Particles*/
+#particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+}
